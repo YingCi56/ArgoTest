@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application
+  name: argo-app
   namespace: argocd
 spec:
   project: default
 
   source:
-    repoURL: https://github.com/YingCi56/ArgoTest
+    repoURL: https://github.com/YingCi56/ArgoTest.git
     targetRevision: HEAD
     path: dev
   destination: 
