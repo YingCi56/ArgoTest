@@ -1,6 +1,9 @@
-import tkinter as tk    
-from tkinter import ttk    
-win = tk.Tk()    
-win.title("Python GUI App")    
-ttk.Label(win, text="Hello World").pack()    
-win.mainloop()  
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/') 
+def hello_world(): 
+    return 'Hello World!'
+
+if __name__ == '__main__':
+    app.run()
